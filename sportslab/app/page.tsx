@@ -134,55 +134,49 @@ export default function MultisportCampPage() {
 
 
       {/* HERO */}
-      <section className="px-6 pb-24 pt-36">
+<section className="bg-[#0B0F19] px-6 pb-20 pt-32 text-white md:min-h-screen md:pt-40">
+  <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
 
-        <div className="mx-auto grid max-w-7xl items-center gap-16 md:grid-cols-2">
+    {/* LEFT */}
+    <div>
+      <p className="mb-5 text-xs font-black uppercase tracking-[0.35em] text-[#2563EB] md:text-sm">
+        Brisbane Elite Soccer Academy
+      </p>
 
-          <div>
+      <h1 className="mb-6 text-5xl font-black leading-[0.9] md:text-8xl">
+        TRAIN.
+        <br />
+        DEVELOP.
+        <br />
+        COMPETE.
+      </h1>
 
-            <p className="mb-5 text-sm font-black uppercase tracking-[0.3em] text-[#2563EB]">
-              Brisbane Sports Academy
-            </p>
+      <p className="mb-10 max-w-2xl text-lg leading-relaxed text-zinc-300 md:text-xl">
+        Modern football development programs helping young athletes build confidence,
+        technical ability, movement quality and game intelligence.
+      </p>
 
-            <h1 className="mb-8 text-6xl font-black leading-none md:text-8xl">
-              TRAIN
-              <br />
-              DEVELOP
-              <br />
-              COMPETE
-            </h1>
+      <a
+        href="#programs"
+        className="inline-flex w-full items-center justify-center rounded-full bg-[#2563EB] px-8 py-5 text-lg font-black text-white transition hover:scale-105 md:w-auto"
+      >
+        Explore Programs →
+      </a>
+    </div>
 
-            <p className="mb-10 max-w-xl text-xl leading-relaxed text-slate-700">
-              Premium multisport camps, private coaching and junior development
-              programs helping young athletes build confidence and performance.
-            </p>
+    {/* RIGHT IMAGE - DESKTOP ONLY */}
+    <div className="hidden md:block">
+      <div className="overflow-hidden rounded-[3rem] border border-white/10">
+        <img
+          src="/hero-soccer.jpg"
+          alt="SportsLab Academy football training"
+          className="h-[620px] w-full object-cover"
+        />
+      </div>
+    </div>
 
-            <div className="mt-12">
-
-  <a
-    href="#programs"
-    className="inline-flex rounded-full bg-[#2563EB] px-8 py-5 text-lg font-black text-white transition hover:scale-105"
-  >
-    Explore Programs →
-  </a>
-
-</div>
-
-          </div>
-
-          <div className="relative">
-
-            <div className="absolute -bottom-5 -right-5 h-full w-full rounded-[2rem] bg-[#2563EB]" />
-
-            <div className="relative h-[650px] overflow-hidden rounded-[2rem] border-4 border-black">
-              <div className="absolute inset-0 bg-[url('/hero-soccer.jpg')] bg-cover bg-center" />
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
+  </div>
+</section>
 
       {/* PROGRAMS */}
 <section id="programs" className="bg-[#0B0F19] px-6 py-24 text-white">
@@ -215,7 +209,7 @@ export default function MultisportCampPage() {
 
         <div className="p-8">
           <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-[#2563EB]">
-            Holiday Camps
+            Holiday Programs
           </p>
 
           <h3 className="mb-4 text-4xl font-black leading-none">
@@ -304,7 +298,7 @@ export default function MultisportCampPage() {
 </section>
 
 {/* TESTIMONIALS */}
-<section className="bg-[#F4F1E8] px-6 py-24 text-[#0F172A]">
+<section className="bg-[#F4F1E8] px-6 py-20 text-[#0F172A] md:py-24">
 
   <div className="mx-auto max-w-7xl">
 
@@ -312,72 +306,52 @@ export default function MultisportCampPage() {
       Testimonials
     </p>
 
-    <h2 className="mb-16 text-5xl font-black leading-none md:text-7xl">
+    <h2 className="mb-12 text-4xl font-black leading-none md:mb-16 md:text-7xl">
       TRUSTED BY
       <br />
       PLAYERS &
       <br />
-      FAMILIES
+      FAMILIES.
     </h2>
 
-    <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
+    <div className="grid gap-6 md:grid-cols-3">
 
       {[
         [
-  "The sessions helped me improve my shooting, game awareness and speed of decision-making. The BlazePod methodology makes every drill intense, realistic and focused on match situations.",
-  "Tommaso Rio • FQPL Player",
-],
-[
-    "The junior program has been fantastic for Hudson. She’s become more confident, coordinated and excited about football every week.",
-    "Emma F. • Junior Program Parent",
-  ],
-
-  [
-    "My child has grown so much in confidence since joining SportsLab. The coaching is energetic, professional and positive.",
-    "Sarah M. • Parent",
-  ],
-  [
-    "The 1-to-1 sessions helped me improve my touch, speed and decision-making. Every session feels intense and specific.",
-    "Maria S. • Academy Player",
-  ],
-  [
-    "The holiday camp was extremely well organised. The kids were active, engaged and came home smiling every day.",
-    "Cam T. • Camp Parent",
-  ],
-  
-  [
-    "Jayde absolutely loves the sessions. The coaching environment is positive, challenging and has really helped her confidence and development.",
-    "Jayde’s Mum • Academy Parent",
-  ],
-  
-
-].map(([quote, name]) => (
+          "The sessions helped me improve my shooting, game awareness and speed of decision-making. The BlazePod methodology makes every drill intense and realistic.",
+          "Tommaso Rio • FQPL Player",
+        ],
+        [
+          "Jayde absolutely loves the sessions. The environment is positive, challenging and has really helped her confidence and development.",
+          "Jayde’s Mum • Academy Parent",
+        ],
+        [
+          "The junior program has been fantastic for Emma. She’s become more confident, coordinated and excited about football every week.",
+          "Emma F. • Junior Program Parent",
+        ],
+      ].map(([quote, name]) => (
         <div
           key={name}
-          className="rounded-[2rem] border border-[#2563EB]/10 bg-white p-8 shadow-xl"
+          className="rounded-[2rem] border border-[#2563EB]/10 bg-white p-6 shadow-xl md:p-8"
         >
-
-          <div className="mb-5 text-[#FBBF24]">
+          <div className="mb-4 text-[#FBBF24]">
             ★★★★★
           </div>
 
-          <p className="mb-8 text-lg leading-relaxed text-zinc-600">
+          <p className="mb-6 text-base leading-relaxed text-zinc-600 md:text-lg">
             “{quote}”
           </p>
 
           <div className="flex items-center gap-4">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#2563EB] text-sm font-black text-white">
+              {name.split(" ")[0][0]}
+              {name.split(" ")[1][0]}
+            </div>
 
-  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#2563EB] text-sm font-black text-white">
-    {name.split(" ")[0][0]}
-    {name.split(" ")[1][0]}
-  </div>
-
-  <p className="font-black text-[#0F172A]">
-    {name}
-  </p>
-
-</div>
-
+            <p className="text-sm font-black text-[#0F172A] md:text-base">
+              {name}
+            </p>
+          </div>
         </div>
       ))}
 
