@@ -17,7 +17,7 @@ export default function MultisportCampPage() {
           <a href="/" className="flex items-center gap-4">
 
    <img
-      src="/logo1.png"
+      src="/logo1.PNG"
       alt="SportsLab Academy"
       className="h-20 w-20 rounded-full object-cover"
     />
