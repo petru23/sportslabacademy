@@ -1,137 +1,123 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-
-export default function CoachingPage() {
-
-  const [menuOpen, setMenuOpen] = useState(false)
-
+export default function MultisportCampPage() {
   return (
-
-    <main className="bg-[#0B0F19] text-white">
+    <main className="bg-[#F5F0E6] text-[#111111]">
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#2563EB]/95 text-white backdrop-blur-xl">
+      <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#2563EB] text-white">
+        <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
 
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+          {/* MOBILE LOGIN */}
+          <a
+            href="/login"
+            className="text-sm font-bold uppercase tracking-wide md:hidden"
+          >
+            LOGIN
+          </a>
 
-          <a href="/" className="flex items-center gap-4">
+          {/* LOGO */}
+          <a
+            href="/"
+            className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+          >
+            <img
+              src="/logo1.png"
+              alt="SportsLab Academy"
+              className="h-30 w-30 rounded-full object-contain md:h-22 md:w-22"
+            />
+          </a>
 
-   <img
-      src="/logo1.png"
-      alt="SportsLab Academy"
-      className="h-20 w-20 rounded-full object-cover"
-    />
-
-
-  <div className="leading-none text-white">
-
-    <p className="text-3xl font-black tracking-wide">
-      SPORTSLAB ACADEMY
-    </p>
-
-  </div>
-
-</a>
-          <div className="flex items-center gap-4">
-
-            {/* DESKTOP */}
-            <div className="hidden items-center gap-8 md:flex">
-
-              <a href="/camp" className="font-semibold hover:text-[#2563EB]">
-                HOLIDAY CAMPS
-              </a>
-
-              <a href="/coaching" className="font-semibold hover:text-[#2563EB]">
-                PRIVATE COACHING
-              </a>
-
-              <a href="/junior-program" className="font-semibold hover:text-[#2563EB]">
-                JUNIOR PROGRAMS
-              </a>
-
-              <a href="/team" className="font-semibold hover:text-[#2563EB]">
-              MEET OUR TEAM
-              </a>
-
-            </div>
-
-            {/* MOBILE */}
-            <button
-              onClick={() => setMenuOpen(true)}
-              className="rounded-full bg-[#2563EB] px-4 py-2 text-2xl font-black text-white md:hidden"
-            >
-              ☰
-            </button>
-
-          </div>
-
-        </div>
-
-      </nav>
-
-      {/* MOBILE MENU */}
-      {menuOpen && (
-
-        <div className="fixed inset-0 z-[100] bg-[#2563EB] text-white">
-
-          <div className="flex items-center justify-between px-6 py-6">
-
-  <div className="flex items-center gap-4">
-
-    <img
-      src="/logo1.png"
-      alt="SportsLab Academy"
-      className="h-20 w-20 rounded-full object-cover"
-    />
-
-    <div>
-
-      <h2 className="text-3xl font-black leading-none">
-        SPORTSLAB ACADEMY
-      </h2>
-
-
-    </div>
-
-  </div>
-
-  <button
-    onClick={() => setMenuOpen(false)}
-    className="text-5xl font-light"
-  >
-    ×
-  </button>
-
-</div>
-
-          <div className="mt-8 flex flex-col px-8 text-3xl font-light uppercase">
-
-            <a href="/" className="border-b border-white/20 py-6">
-              HOME
+          {/* DESKTOP MENU */}
+          <div className="hidden items-center gap-8 md:flex">
+            
+            <a href="/camp" className="font-semibold hover:text-white/70">
+              HOLIDAY PROGRAMS
             </a>
 
-            <a href="/camp" className="border-b border-white/20 py-6">
-              HOLIDAY CAMPS
-            </a>
-
-            <a href="/coaching" className="border-b border-white/20 py-6">
+            <a href="/coaching" className="font-semibold hover:text-white/70">
               PRIVATE COACHING
             </a>
 
-            <a href="/junior-program" className="border-b border-white/20 py-6">
+            <a href="/junior-program" className="font-semibold hover:text-white/70">
               JUNIOR PROGRAMS
             </a>
 
-            <a href="/junior-program" className="border-b border-white/20 py-6">
-            MEET OUR TEAM
+            <a href="/team" className="font-semibold hover:text-white/70">
+              MEET OUR TEAM
             </a>
+          </div>
+
+          {/* MOBILE TOGGLE */}
+          <input
+            id="mobile-menu-toggle"
+            type="checkbox"
+            className="peer hidden"
+          />
+
+          {/* HAMBURGER */}
+          <label
+  htmlFor="mobile-menu-toggle"
+  className="relative z-[100000] flex h-10 w-10 cursor-pointer items-center justify-center text-3xl font-black text-white peer-checked:hidden md:hidden"
+>
+  ☰
+</label>
+
+          {/* MOBILE MENU */}
+          <div className="fixed inset-0 z-[99999] translate-x-full bg-[#2563EB] text-white transition-transform duration-300 peer-checked:translate-x-0 md:hidden">
+
+            <div className="flex items-center justify-between px-6 py-5">
+
+              <a
+                href="/login"
+                className="text-sm font-bold uppercase tracking-wide"
+              >
+                LOGIN
+              </a>
+
+              <a href="/" className="flex items-center justify-center overflow-visible">
+  <img
+    src="/logo1.png"
+    alt="SportsLab Academy"
+    className="h-24 w-auto object-contain max-w-none"
+  />
+</a>
+
+              <label
+                htmlFor="mobile-menu-toggle"
+                className="cursor-pointer text-5xl font-light leading-none"
+              >
+                ×
+              </label>
+
+            </div>
+
+            <div className="mt-2 flex flex-col px-8 text-3xl font-light uppercase">
+              <a href="/" className="border-b border-white/20 py-5">
+                HOME
+              </a>
+
+              <a href="/camp" className="border-b border-white/20 py-5">
+                HOLIDAY PROGRAMS
+              </a>
+
+              <a href="/coaching" className="border-b border-white/20 py-5">
+                PRIVATE COACHING
+              </a>
+
+              <a href="/junior-program" className="border-b border-white/20 py-5">
+                JUNIOR PROGRAMS
+              </a>
+
+              <a href="/team" className="border-b border-white/20 py-5">
+                MEET OUR TEAM
+              </a>
+            </div>
 
           </div>
 
         </div>
-
-      )}
+      </nav>
 
       {/* HERO */}
 <section className="min-h-screen bg-[#0B0F19] px-6 pb-16 pt-40 text-white">

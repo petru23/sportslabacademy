@@ -1,246 +1,376 @@
-"use client"
-
-import { useState } from "react"
+'use client'
 
 export default function MultisportCampPage() {
-
-  const [menuOpen, setMenuOpen] = useState(false)
-
   return (
     <main className="bg-[#F5F0E6] text-[#111111]">
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#2563EB]/95 text-white backdrop-blur-xl">
+      <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#2563EB] text-white">
+        <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
 
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+          {/* MOBILE LOGIN */}
+          <a
+            href="/login"
+            className="text-sm font-bold uppercase tracking-wide md:hidden"
+          >
+            LOGIN
+          </a>
 
-          <a href="/" className="flex items-center gap-4">
+          {/* LOGO */}
+          <a
+            href="/"
+            className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+          >
+            <img
+              src="/logo1.png"
+              alt="SportsLab Academy"
+              className="h-30 w-30 rounded-full object-contain md:h-22 md:w-22"
+            />
+          </a>
 
-   <img
-      src="/logo1.png"
-      alt="SportsLab Academy"
-      className="h-20 w-20 rounded-full object-cover"
-    />
+          {/* DESKTOP MENU */}
+          <div className="hidden items-center gap-8 md:flex">
+            
+            <a href="/camp" className="font-semibold hover:text-white/70">
+              HOLIDAY PROGRAMS
+            </a>
 
+            <a href="/coaching" className="font-semibold hover:text-white/70">
+              PRIVATE COACHING
+            </a>
 
-  <div className="leading-none text-white">
+            <a href="/junior-program" className="font-semibold hover:text-white/70">
+              JUNIOR PROGRAMS
+            </a>
 
-    <p className="text-3xl font-black tracking-wide">
-      SPORTSLAB ACADEMY
-    </p>
-
-  </div>
-
-</a>
-          <div className="flex items-center gap-4">
-
-            {/* DESKTOP */}
-            <div className="hidden items-center gap-8 md:flex">
-
-              <a href="/camp" className="font-semibold hover:text-[#2563EB]">
-                HOLIDAY CAMPS
-              </a>
-
-              <a href="/coaching" className="font-semibold hover:text-[#2563EB]">
-                PRIVATE COACHING
-              </a>
-
-              <a href="/junior-program" className="font-semibold hover:text-[#2563EB]">
-                JUNIOR PROGRAMS
-              </a>
-
-              <a href="/team" className="font-semibold hover:text-[#2563EB]">
+            <a href="/team" className="font-semibold hover:text-white/70">
               MEET OUR TEAM
+            </a>
+          </div>
+
+          {/* MOBILE TOGGLE */}
+          <input
+            id="mobile-menu-toggle"
+            type="checkbox"
+            className="peer hidden"
+          />
+
+          {/* HAMBURGER */}
+          <label
+  htmlFor="mobile-menu-toggle"
+  className="relative z-[100000] flex h-10 w-10 cursor-pointer items-center justify-center text-3xl font-black text-white peer-checked:hidden md:hidden"
+>
+  ☰
+</label>
+
+          {/* MOBILE MENU */}
+          <div className="fixed inset-0 z-[99999] translate-x-full bg-[#2563EB] text-white transition-transform duration-300 peer-checked:translate-x-0 md:hidden">
+
+            <div className="flex items-center justify-between px-6 py-5">
+
+              <a
+                href="/login"
+                className="text-sm font-bold uppercase tracking-wide"
+              >
+                LOGIN
               </a>
+
+              <a href="/" className="flex items-center justify-center overflow-visible">
+  <img
+    src="/logo1.png"
+    alt="SportsLab Academy"
+    className="h-24 w-auto object-contain max-w-none"
+  />
+</a>
+
+              <label
+                htmlFor="mobile-menu-toggle"
+                className="cursor-pointer text-5xl font-light leading-none"
+              >
+                ×
+              </label>
 
             </div>
 
-            {/* MOBILE */}
-            <button
-              onClick={() => setMenuOpen(true)}
-              className="rounded-full bg-[#2563EB] px-4 py-2 text-2xl font-black text-white md:hidden"
-            >
-              ☰
-            </button>
+            <div className="mt-2 flex flex-col px-8 text-3xl font-light uppercase">
+              <a href="/" className="border-b border-white/20 py-5">
+                HOME
+              </a>
+
+              <a href="/camp" className="border-b border-white/20 py-5">
+                HOLIDAY PROGRAMS
+              </a>
+
+              <a href="/coaching" className="border-b border-white/20 py-5">
+                PRIVATE COACHING
+              </a>
+
+              <a href="/junior-program" className="border-b border-white/20 py-5">
+                JUNIOR PROGRAMS
+              </a>
+
+              <a href="/team" className="border-b border-white/20 py-5">
+                MEET OUR TEAM
+              </a>
+            </div>
 
           </div>
 
         </div>
-
       </nav>
 
-      {/* MOBILE MENU */}
-      {menuOpen && (
+      {/* HOLIDAY PROGRAMS PAGE */}
+      <section className="min-h-screen bg-[#F4F1E8] px-6 pb-16 pt-24 text-[#0F172A] md:pt-36">
+        <div className="mx-auto max-w-7xl">
 
-        <div className="fixed inset-0 z-[100] bg-[#2563EB] text-white">
+          {/* PAGE INTRO */}
+          <div className="mb-10 text-center">
+            <p className="mb-4 text-sm font-black uppercase tracking-[0.3em] text-[#2563EB]">
+              SportsLab Academy
+            </p>
 
-          <div className="flex items-center justify-between px-6 py-6">
+            <h1 className="text-5xl font-black leading-none tracking-[-0.04em] md:text-7xl">
+              HOLIDAY
+            
+              PROGRAMS
+            </h1>
 
-  <div className="flex items-center gap-4">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
+              Choose your preferred holiday program and find the camp that best fits your child.
+            </p>
+          </div>
 
-    <img
-      src="/logo1.png"
-      alt="SportsLab Academy"
-      className="h-20 w-20 rounded-full object-cover"
-    />
+          {/* PROGRAM CARDS */}
+          <div
+            id="programs"
+            className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2"
+          >
 
-    <div>
+            {/* MULTISPORT CAMP */}
+<a
+  href="/multisport-camp"
+  className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl transition hover:-translate-y-2"
+>
 
-      <h2 className="text-3xl font-black leading-none">
-        SPORTSLAB ACADEMY
+  {/* IMAGE */}
+  <div className="relative h-[260px] overflow-hidden rounded-t-[2rem]">
+
+    <div className="absolute inset-0 bg-[url('/multisport-camp.jpg')] bg-cover bg-center transition duration-700 group-hover:scale-105" />
+
+    <div className="absolute left-4 top-4 rounded-full bg-[#2563EB] px-4 py-2 text-xs font-black uppercase tracking-wide text-white">
+      Available Now
+    </div>
+
+  </div>
+
+  {/* BLUE TITLE BOX */}
+  <div className="-mt-1 relative z-10 mb-6">
+    <div className="w-full bg-[#2563EB] px-6 py-6 shadow-xl">
+
+      <h2 className="text-center text-4xl font-black leading-none tracking-[-0.03em] text-white">
+          MULTISPORT
+        <br />
+        FULL DAY CAMP
       </h2>
 
+    </div>
+  </div>
+
+  {/* CONTENT */}
+  <div className="px-6 pb-6">
+
+    <div className="mb-4 rounded-2xl bg-[#F4F1E8] p-4">
+
+      <p className="mb-1 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
+        Location
+      </p>
+
+      <p className="text-lg font-black">
+        📍 Davies Park, West End
+      </p>
+
+    </div>
+
+    <div className="mb-4 rounded-2xl bg-[#F4F1E8] p-4">
+
+      <p className="mb-1 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
+        Ages & Time
+      </p>
+
+      <p className="text-lg font-black leading-relaxed">
+        🎂 5–12 Years
+        <br />
+        ⏰ 8am–4pm
+      </p>
+
+    </div>
+
+    <div className="mb-6 rounded-2xl bg-[#F4F1E8] p-4">
+
+      <p className="mb-1 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
+        Dates
+      </p>
+
+      <p className="text-lg font-black leading-relaxed">
+        📆 29th June – 3rd July
+        <br />
+        📆 6th July – 10th July
+      </p>
+
+    </div>
+
+    <div className="flex items-center justify-between">
+
+      <div>
+
+        <p className="text-xs font-semibold text-slate-500">
+          from
+        </p>
+
+        <p className="text-3xl font-black">
+          $70
+        </p>
+
+        <p className="text-sm text-slate-500">
+          per day
+        </p>
+
+      </div>
+
+      <span className="rounded-full bg-[#2563EB] px-5 py-3 text-sm font-black text-white">
+        View →
+      </span>
 
     </div>
 
   </div>
 
-  <button
-    onClick={() => setMenuOpen(false)}
-    className="text-5xl font-light"
-  >
-    ×
-  </button>
+</a>
 
-</div>
+            {/* ELITE SOCCER CLINIC */}
+<a
+  href="/elite-soccer-clinic"
+  className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl transition hover:-translate-y-2"
+>
 
-          <div className="mt-8 flex flex-col px-8 text-3xl font-light uppercase">
+  {/* IMAGE */}
+  <div className="relative h-[260px] overflow-hidden rounded-t-[2rem]">
 
-            <a href="/" className="border-b border-white/20 py-6">
-              HOME
-            </a>
+    <div className="absolute inset-0 bg-[url('/elite-soccer-clinic.jpg')] bg-cover bg-center transition duration-700 group-hover:scale-105" />
 
-            <a href="/camp" className="border-b border-white/20 py-6">
-              HOLIDAY CAMPS
-            </a>
+    <div className="absolute left-4 top-4 rounded-full bg-[#2563EB] px-4 py-2 text-xs font-black uppercase tracking-wide text-white">
+      Available Now
+    </div>
 
-            <a href="/coaching" className="border-b border-white/20 py-6">
-              PRIVATE COACHING
-            </a>
+  </div>
 
-            <a href="/junior-program" className="border-b border-white/20 py-6">
-              JUNIOR PROGRAMS
-            </a>
+  {/* BLUE TITLE BOX */}
+  <div className="-mt-1 relative z-10 mb-6">
+    <div className="w-full bg-[#2563EB] px-6 py-6 shadow-xl">
 
-            <a href="/junior-program" className="border-b border-white/20 py-6">
-            MEET OUR TEAM
-            </a>
+      <h2 className="text-center text-4xl font-black leading-none tracking-[-0.03em] text-white">
+        ELITE SOCCER
+        <br />
+        CLINIC
+      </h2>
+
+    </div>
+  </div>
+
+  {/* CONTENT */}
+  <div className="px-6 pb-6">
+
+    {/* LOCATION */}
+    <div className="mb-4 rounded-2xl bg-[#F4F1E8] p-4">
+
+      <p className="mb-1 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
+        Location
+      </p>
+
+      <p className="text-lg font-black">
+        📍 Davies Park, West End
+      </p>
+
+    </div>
+
+    {/* AGES & TIME */}
+    <div className="mb-4 rounded-2xl bg-[#F4F1E8] p-4">
+
+      <p className="mb-1 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
+        Ages & Time
+      </p>
+
+      <p className="text-lg font-black leading-relaxed">
+        🎂 10–16 Years
+        <br />
+        ⏰  8am–12pm
+      </p>
+
+    </div>
+
+    {/* DATES */}
+    <div className="mb-6 rounded-2xl bg-[#F4F1E8] p-4">
+
+      <p className="mb-1 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
+        Dates
+      </p>
+
+      <p className="text-lg font-black leading-relaxed">
+        📆 1st July – 3rd July
+        <br />
+        📆 8th July – 10th July
+      </p>
+
+    </div>
+
+    {/* PRICE */}
+    <div className="flex items-center justify-between">
+
+      <div>
+
+        <p className="text-xs font-semibold text-slate-500">
+          from
+        </p>
+
+        <p className="text-3xl font-black">
+          $60
+        </p>
+
+        <p className="text-sm text-slate-500">
+          per day
+        </p>
+
+      </div>
+
+      <span className="rounded-full bg-[#2563EB] px-5 py-3 text-sm font-black text-white">
+        View →
+      </span>
+
+    </div>
+
+  </div>
+
+</a>
 
           </div>
-
         </div>
 
-      )}
+        {/* WHATSAPP BUTTON */}
+        <a
+          href="https://wa.me/61468744194"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-24 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-3xl text-white shadow-2xl transition hover:scale-110"
+        >
+          💬
+        </a>
+      </section>
 
-      <main className="min-h-screen bg-[#F4F1E8] px-6 py-16 pt-36 text-[#0F172A]">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-           
-
-            <h1 className="text-5xl font-black leading-none md:text-7xl">
-              MULTISPORT HOLIDAY PROGRAMS
-            </h1>
-
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-              Premium school holiday programs designed for active kids, movement,
-              confidence and multisport development.
-            </p>
-          </div>
-
-          <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
-            <a
-              href="/multisport-camp"
-              className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl transition hover:-translate-y-2"
-            >
-              <div className="relative h-[300px] overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/multisport-camp.jpg')] bg-cover bg-center transition duration-700 group-hover:scale-105" />
-
-                <div className="absolute left-5 top-5 rounded-full bg-[#2563EB] px-5 py-2 text-sm font-black uppercase tracking-wide text-white">
-                  Early Bird Available
-                </div>
-              </div>
-
-              <div className="p-8">
-                <h2 className="mb-3 text-4xl font-black leading-none">
-                  WEST END
-                  <br />
-                  HOLIDAY PROGRAM
-                </h2>
-
-                <p className="mb-6 text-lg font-semibold text-slate-500">
-                  📍 Davies Park
-                </p>
-
-                <div className="mb-6 grid gap-4">
-                  <div className="rounded-2xl bg-[#F4F1E8] p-5">
-                    <p className="mb-1 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
-                      Dates
-                    </p>
-                    <p className="text-lg font-black">
-                      Week 1: 29th June – 3rd July
-                      <br />
-                      Week 2: 6th July – 10th July
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl bg-[#F4F1E8] p-5">
-                    <p className="mb-1 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
-                      Ages & Time
-                    </p>
-                    <p className="text-lg font-black">
-                      6–14 Years • 8am–4pm
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-end justify-between gap-4">
-                  <div>
-                    <p className="text-sm font-semibold text-slate-500">
-                      from
-                    </p>
-                    <h3 className="text-5xl font-black">$70</h3>
-                    <p className="text-sm text-slate-500">per day</p>
-                  </div>
-
-                  <span className="rounded-full bg-[#2563EB] px-6 py-3 font-black text-white">
-                    Learn More →
-                  </span>
-                </div>
-              </div>
-            </a>
-
-            <div className="flex items-center justify-center rounded-[2rem] border border-dashed border-slate-300 bg-white/50 p-10 text-center">
-              <div>
-                <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-[#2563EB]">
-                  Coming Soon
-                </p>
-                <h2 className="text-4xl font-black">
-                  More Camps
-                  <br />
-                  Coming Soon
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div> 
-      {/* WHATSAPP BUTTON */}
-<a
-  href="https://wa.me/61468744194"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="fixed bottom-24 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-3xl text-white shadow-2xl transition hover:scale-110"
->
-  💬
-</a>
-</main>
-      
- {/* FOOTER */}
+      {/* FOOTER */}
       <footer className="bg-black px-6 py-16 text-white">
-
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-3">
 
           <div>
-
             <h3 className="mb-5 text-3xl font-black">
               SPORTSLAB ACADEMY
             </h3>
@@ -249,17 +379,14 @@ export default function MultisportCampPage() {
               Premium sports development programs helping young athletes build
               confidence, movement and performance.
             </p>
-
           </div>
 
           <div>
-
             <p className="mb-5 text-sm font-black uppercase tracking-[0.3em] text-blue-300">
               Programs
             </p>
 
             <div className="space-y-3 text-lg">
-
               <a href="/camp" className="block hover:text-blue-300">
                 Holiday Programs
               </a>
@@ -271,33 +398,24 @@ export default function MultisportCampPage() {
               <a href="/junior-program" className="block hover:text-blue-300">
                 Junior Programs
               </a>
-
             </div>
-
           </div>
 
           <div>
-
             <p className="mb-5 text-sm font-black uppercase tracking-[0.3em] text-blue-300">
               Contact
             </p>
 
             <div className="space-y-3 text-lg text-zinc-300">
-
               <p>📞 Davide: 0468744194</p>
-
               <p>📧 sportslabacademyau@gmail.com</p>
-
               <p>Brisbane, QLD</p>
-
             </div>
-
           </div>
 
         </div>
-
       </footer>
 
     </main>
-  );
+  )
 }
