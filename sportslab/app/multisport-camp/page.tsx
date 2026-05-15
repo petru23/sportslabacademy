@@ -75,11 +75,14 @@ export default function MultisportCampPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
 
           <a href="/" className="relative z-[9999] flex shrink-0 items-center">
+          <a href="/" className="flex shrink-0 items-center justify-center">
   <img
-  src="/sportslab-logo.png"
-  alt="SportsLab Academy"
-  className="block h-16 w-16 rounded-full object-contain"
-/>
+    src="/sportslab-logo.png"
+    alt="SportsLab Academy"
+    className="block h-14 w-14 object-contain md:h-20 md:w-20"
+  />
+</a>
+  
 </a>
 
           <div className="hidden items-center gap-8 md:flex">
