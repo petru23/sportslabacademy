@@ -232,7 +232,7 @@ export default function ItalyTourPage() {
 
           <div className="grid gap-4 sm:grid-cols-2 md:gap-6">
             {[
-              { title: 'Attend a Serie A Match', label: 'Inside San Siro / Giuseppe Meazza stadium', img: null },
+              { title: 'Attend a Serie A Match', label: 'Inside San Siro / Giuseppe Meazza stadium', img: '/italy-tour-photo-4.jpeg' },
               { title: 'Explore Como', label: 'Lakeside village at dusk', img: '/italy-tour-photo-3.jpeg' },
               { title: 'Explore Milan', label: 'Duomo di Milano at sunset', img: '/italy-tour-milan.jpeg' },
               { title: 'Visit the Italian Soccer Museum', label: 'Azzurri jerseys on display', img: null },
