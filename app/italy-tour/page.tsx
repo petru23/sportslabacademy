@@ -232,20 +232,20 @@ export default function ItalyTourPage() {
 
           <div className="grid gap-4 sm:grid-cols-2 md:gap-6">
             {[
-              ['Attend a Serie A Match', 'Inside San Siro / Giuseppe Meazza stadium', null],
-              ['Explore Como', 'Lakeside village at dusk', '/italy-tour-photo-3.jpeg'],
-              ['Explore Milan', 'Duomo di Milano at sunset', null],
-              ['Visit the Italian Soccer Museum', 'Azzurri jerseys on display', null],
-            ].map(([title, imgLabel, imgSrc]) => (
+              { title: 'Attend a Serie A Match', label: 'Inside San Siro / Giuseppe Meazza stadium', img: null },
+              { title: 'Explore Como', label: 'Lakeside village at dusk', img: '/italy-tour-photo-3.jpeg' },
+              { title: 'Explore Milan', label: 'Duomo di Milano at sunset', img: null },
+              { title: 'Visit the Italian Soccer Museum', label: 'Azzurri jerseys on display', img: null },
+            ].map(({ title, label, img }) => (
               <div
                 key={title}
                 className="overflow-hidden rounded-[2rem] bg-white shadow-sm"
               >
                 <div className="relative h-[220px] md:h-[260px]">
-                  {imgSrc ? (
-                    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${imgSrc}')` }} />
+                  {img ? (
+                    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${img}')` }} />
                   ) : (
-                    <ImagePlaceholder label={imgLabel} />
+                    <ImagePlaceholder label={label} />
                   )}
                 </div>
 
