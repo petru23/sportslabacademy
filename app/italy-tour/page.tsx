@@ -425,7 +425,7 @@ export default function ItalyTourPage() {
       </section>
 
       {/* CONTACT / ENQUIRY */}
-      <section id="enquire" className="bg-[#F4F1E8] px-6 py-12 text-[#0F172A]">
+      <section id="enquire" className="scroll-mt-32 bg-[#F4F1E8] px-6 py-12 text-[#0F172A]">
         <div className="mx-auto max-w-4xl rounded-[3rem] border border-[#2563EB]/10 bg-[#0F172A] p-10 text-white shadow-2xl md:p-14">
           <p className="mb-4 text-sm font-black uppercase tracking-[0.3em] text-[#2563EB]">
             Contact SportsLab Academy
