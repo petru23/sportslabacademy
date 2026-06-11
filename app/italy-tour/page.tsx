@@ -134,18 +134,22 @@ export default function ItalyTourPage() {
 
               <div className="flex flex-wrap items-center gap-4">
                 {[
-                  { name: 'AC Milan', src: '/ac-milan-logo.png' },
-                  { name: 'Como 1907', src: '/como-1907-logo.svg' },
-                  { name: 'ACF Fiorentina', src: '/fiorentina-logo.png' },
+                  { name: 'AC Milan', src: '/ac-milan-logo.png', size: 'large' },
+                  { name: 'Como 1907', src: '/como-1907-logo.svg', size: 'large' },
+                  { name: 'ACF Fiorentina', src: '/fiorentina-logo.png', size: 'normal' },
                 ].map((club) => (
                   <div
                     key={club.name}
-                    className="flex h-16 w-16 items-center justify-center rounded-lg border border-black/10 bg-white shadow-sm"
+                    className={`flex items-center justify-center rounded-lg border border-black/10 bg-white shadow-sm ${
+                      club.size === 'large' ? 'h-20 w-20' : 'h-16 w-16'
+                    }`}
                   >
                     <img
                       src={club.src}
                       alt={`${club.name} Logo`}
-                      className="h-12 w-12 object-contain"
+                      className={`object-contain ${
+                        club.size === 'large' ? 'h-16 w-16' : 'h-12 w-12'
+                      }`}
                     />
                   </div>
                 ))}
