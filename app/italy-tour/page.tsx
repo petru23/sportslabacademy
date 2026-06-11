@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import AuthModal from '@/components/AuthModal'
 import { useCart } from '@/context/CartContext'
 import Navbar from '@/components/Navbar'
@@ -34,6 +34,37 @@ export default function ItalyTourPage() {
     if (result === 'openAuthModal') setAuthOpen(true)
     else if (loggedIn) {
       setCartOpen(false)
+    }
+  }
+
+  // Meta Pixel tracking
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'PageView')
+      window.fbq('track', 'ViewContent', {
+        content_name: 'Italy Tour 2026',
+        content_type: 'product',
+        value: 2400,
+        currency: 'AUD',
+      })
+    }
+  }, [])
+
+  const handleSecurePlace = () => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'InitiateCheckout', {
+        content_name: 'Italy Tour 2026',
+        value: 2400,
+        currency: 'AUD',
+      })
+    }
+  }
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Lead', {
+        content_name: 'Italy Tour 2026 Enquiry',
+      })
     }
   }
 
@@ -122,6 +153,7 @@ export default function ItalyTourPage() {
             <div className="flex flex-col gap-4 sm:flex-row">
               <a
                 href="#tour-costs"
+                onClick={handleSecurePlace}
                 className="rounded-full bg-[#2563EB] px-8 py-5 text-center font-black uppercase tracking-wide text-white"
               >
                 Secure Your Place →
@@ -408,6 +440,7 @@ export default function ItalyTourPage() {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="#enquire"
+              onClick={handleSecurePlace}
               className="rounded-full bg-white px-8 py-5 font-black uppercase tracking-wide text-[#2563EB] transition hover:scale-105"
             >
               Register Now →
@@ -447,6 +480,7 @@ export default function ItalyTourPage() {
             action="https://formsubmit.co/sportslabacademyau@gmail.com"
             method="POST"
             className="grid gap-5"
+            onSubmit={handleFormSubmit}
           >
 
             <input type="hidden" name="_captcha" value="false" />
