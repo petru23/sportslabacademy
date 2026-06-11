@@ -39,9 +39,9 @@ export default function ItalyTourPage() {
 
   // Meta Pixel tracking
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'PageView')
-      window.fbq('track', 'ViewContent', {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'PageView')
+      (window as any).fbq('track', 'ViewContent', {
         content_name: 'Italy Tour 2026',
         content_type: 'product',
         value: 2400,
@@ -51,8 +51,8 @@ export default function ItalyTourPage() {
   }, [])
 
   const handleSecurePlace = () => {
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'InitiateCheckout', {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout', {
         content_name: 'Italy Tour 2026',
         value: 2400,
         currency: 'AUD',
@@ -61,8 +61,8 @@ export default function ItalyTourPage() {
   }
 
   const handleFormSubmit = (e: React.FormEvent) => {
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'Lead', {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead', {
         content_name: 'Italy Tour 2026 Enquiry',
       })
     }
