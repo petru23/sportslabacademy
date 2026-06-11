@@ -209,7 +209,7 @@ export default function ItalyTourPage() {
           </div>
 
           <div className="relative min-h-[320px] overflow-hidden rounded-[2rem] border-4 border-[#2563EB] md:min-h-full md:rounded-[2.5rem]">
-            <div className="absolute inset-0 bg-[url('/italy-tour-photo-1.jpeg')] bg-cover bg-center" />
+            <div className="absolute inset-0 bg-[url('/italy-tour-training.jpeg')] bg-cover bg-center" />
           </div>
 
         </div>
@@ -235,7 +235,7 @@ export default function ItalyTourPage() {
               { title: 'Attend a Serie A Match', label: 'Inside San Siro / Giuseppe Meazza stadium', img: '/italy-tour-photo-3.jpeg' },
               { title: 'Explore Como', label: 'Lakeside village at dusk', img: '/italy-tour-photo-5.jpeg' },
               { title: 'Explore Milan', label: 'Duomo di Milano at sunset', img: '/italy-tour-milan.jpeg' },
-              { title: 'Visit the Italian Soccer Museum', label: 'Azzurri jerseys on display', img: null },
+              { title: 'Visit the Italian Soccer Museum', label: 'Azzurri jerseys on display', img: '/italy-tour-museum.jpeg' },
             ].map(({ title, label, img }) => (
               <div
                 key={title}
