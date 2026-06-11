@@ -95,10 +95,10 @@ export default function ItalyTourPage() {
               ))}
             </div>
 
-            {/* COLLABORATING CLUBS */}
+            {/* FEATURING CLUBS */}
             <div className="mb-7">
               <p className="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500 md:text-xs">
-                In Collaboration With
+                Featuring
               </p>
 
               <div className="flex flex-wrap items-center gap-3">
