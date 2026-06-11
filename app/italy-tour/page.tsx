@@ -101,18 +101,19 @@ export default function ItalyTourPage() {
                 Featuring
               </p>
 
-              <div className="flex flex-wrap items-center gap-3">
-                {['AC Milan', 'Como 1907', 'ACF Fiorentina'].map((club) => (
+              <div className="flex flex-wrap items-center gap-4">
+                {[
+                  { name: 'AC Milan', label: 'AC Milan Logo' },
+                  { name: 'Como 1907', label: 'Como 1907 Logo' },
+                  { name: 'ACF Fiorentina', label: 'ACF Fiorentina Logo' },
+                ].map((club) => (
                   <div
-                    key={club}
-                    className="flex items-center gap-2 rounded-2xl border border-black/10 bg-white px-4 py-3 shadow-sm"
+                    key={club.name}
+                    className="flex h-16 w-16 items-center justify-center rounded-lg border border-black/10 bg-white shadow-sm"
                   >
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2563EB]/10 text-lg">
-                      ⚽
-                    </span>
-                    <span className="text-sm font-black uppercase tracking-wide">
-                      {club}
-                    </span>
+                    <div className="flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-br from-[#2563EB]/5 to-[#2563EB]/10">
+                      <span className="text-3xl">🏆</span>
+                    </div>
                   </div>
                 ))}
               </div>
