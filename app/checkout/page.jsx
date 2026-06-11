@@ -2,6 +2,10 @@
 
 import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
+import FormInput from '@/components/FormInput'
+
+const inputClass =
+  'h-[64px] w-full rounded-2xl border border-white/25 bg-transparent px-5 text-white outline-none placeholder:text-white/45'
 
 export default function CheckoutPage() {
   const { cart, total } = useCart()
@@ -87,51 +91,51 @@ export default function CheckoutPage() {
 
           <div className="space-y-4">
 
-            <input
+            <FormInput
               name="parentName"
               required
               placeholder="Parent Name"
               value={form.parentName}
               onChange={updateForm}
-              className="h-[64px] w-full rounded-2xl border border-white/25 bg-transparent px-5 text-white outline-none placeholder:text-white/45"
+              className={inputClass}
             />
 
-            <input
+            <FormInput
               name="parentLastName"
               required
               placeholder="Parent Last Name"
               value={form.parentLastName}
               onChange={updateForm}
-              className="h-[64px] w-full rounded-2xl border border-white/25 bg-transparent px-5 text-white outline-none placeholder:text-white/45"
+              className={inputClass}
             />
 
-            <input
+            <FormInput
               name="email"
               type="email"
               required
               placeholder="Email Address"
               value={form.email}
               onChange={updateForm}
-              className="h-[64px] w-full rounded-2xl border border-white/25 bg-transparent px-5 text-white outline-none placeholder:text-white/45"
+              className={inputClass}
             />
 
-            <input
+            <FormInput
               name="phone"
               type="tel"
               required
               placeholder="Phone Number"
               value={form.phone}
               onChange={updateForm}
-              className="h-[64px] w-full rounded-2xl border border-white/25 bg-transparent px-5 text-white outline-none placeholder:text-white/45"
+              className={inputClass}
             />
 
-            <input
+            <FormInput
               name="childName"
               required
               placeholder="Child Name"
               value={form.childName}
               onChange={updateForm}
-              className="h-[64px] w-full rounded-2xl border border-white/25 bg-transparent px-5 text-white outline-none placeholder:text-white/45"
+              className={inputClass}
             />
 
             <div className="relative h-[64px] w-full overflow-hidden rounded-2xl border border-white/25 bg-transparent">
