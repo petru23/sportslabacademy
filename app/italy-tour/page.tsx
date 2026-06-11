@@ -81,7 +81,7 @@ export default function ItalyTourPage() {
                 ['Dates', '6th – 15th Dec 2026'],
                 ['Location', 'Como, Italy'],
                 ['Ages', 'U13 / U14 / U15'],
-                ['From', '$2,750 AUD'],
+                ['From', '$2,400 AUD'],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-2xl bg-white p-4 shadow-sm">
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
@@ -181,91 +181,6 @@ export default function ItalyTourPage() {
         </div>
       </section>
 
-      {/* TRAIN LIKE AN ITALIAN ACADEMY PLAYER */}
-      <section className="bg-[#F5F0E6] px-6 py-8 md:py-12">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-2 md:gap-12">
-
-          <div className="relative order-2 min-h-[320px] overflow-hidden rounded-[2rem] border-4 border-black md:order-1 md:min-h-[480px]">
-            <ImagePlaceholder label="Close-up training drill — balls on pitch" />
-          </div>
-
-          <div className="order-1 md:order-2">
-            <p className="mb-2 text-xs font-black uppercase tracking-[0.3em] text-[#2563EB] md:text-sm">
-              Development First
-            </p>
-
-            <h2 className="mb-6 text-4xl font-black leading-none md:mb-8 md:text-6xl">
-              TRAIN LIKE AN
-              <br />
-              ITALIAN ACADEMY
-              <br />
-              PLAYER
-            </h2>
-
-            <div className="grid gap-3 sm:grid-cols-2 md:gap-4">
-              {[
-                'Technical Training',
-                'Tactical Understanding',
-                'Game Intelligence',
-                'Professional Standards & Discipline',
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-[1.5rem] bg-white px-5 py-4 shadow-sm md:px-6 md:py-5"
-                >
-                  <p className="text-sm font-black leading-snug text-black md:text-lg">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* COMPETE AGAINST ITALIAN CLUBS */}
-      <section className="bg-gradient-to-b from-[#111827] to-[#0B1220] px-6 pt-8 pb-10 text-white md:pt-14 md:pb-20">
-        <div className="mx-auto max-w-7xl">
-
-          <p className="mb-2 text-xs font-black uppercase tracking-[0.3em] text-[#60A5FA] md:text-sm">
-            Real Competition
-          </p>
-
-          <h2 className="mb-8 text-4xl font-black leading-none md:mb-12 md:text-6xl">
-            COMPETE AGAINST
-            <br />
-            ITALIAN CLUBS
-          </h2>
-
-          <div className="grid gap-3 md:grid-cols-4 md:gap-5">
-            {[
-              ['Friendly Matches', '3x'],
-              ['Opposition', 'Italian Academy'],
-              ['Experience', 'Competitive Football'],
-              ['Challenge', 'Test Yourself in a Different Culture'],
-            ].map(([label, value]) => (
-              <div
-                key={label}
-                className="rounded-[1.5rem] border border-white/10 bg-[#111827] p-5 md:rounded-[2rem] md:p-6"
-              >
-                <p className="mb-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#60A5FA] md:text-xs md:tracking-[0.25em]">
-                  {label}
-                </p>
-
-                <h3 className="text-2xl font-black leading-tight md:text-3xl">
-                  {value}
-                </h3>
-              </div>
-            ))}
-          </div>
-
-          <div className="relative mt-6 h-[260px] overflow-hidden rounded-[2rem] border-4 border-[#2563EB] md:mt-8 md:h-[420px] md:rounded-[2.5rem]">
-            <ImagePlaceholder label="Team in blue kit celebrating" />
-          </div>
-
-        </div>
-      </section>
 
       {/* EXPERIENCE ITALIAN FOOTBALL CULTURE */}
       <section className="bg-[#F5F0E6] px-6 py-8 md:py-12">
@@ -413,7 +328,7 @@ export default function ItalyTourPage() {
 
               <div className="flex items-end gap-3">
                 <h3 className="text-5xl font-black leading-none md:text-7xl">
-                  $2,750
+                  $2,400
                 </h3>
 
                 <span className="pb-2 text-sm font-black text-blue-100 md:text-lg">
@@ -451,14 +366,14 @@ export default function ItalyTourPage() {
                 </div>
 
                 <p className="mt-3 text-sm font-black uppercase tracking-wide text-blue-200">
-                  Due by Sunday 14 June 2026
+                  Due by 25 June 2026
                 </p>
               </div>
 
               <div className="rounded-[1.4rem] border border-white/10 bg-white/5 p-5 text-white md:rounded-[1.8rem] md:p-6">
                 <p className="text-sm leading-relaxed text-zinc-300">
                   Minimum 9 players required, maximum 15. If minimum numbers are not reached by
-                  15 July 2026, all deposits will be fully refunded.
+                  30 June 2026, all deposits will be fully refunded.
                 </p>
               </div>
             </div>
@@ -546,7 +461,14 @@ export default function ItalyTourPage() {
             <input
               name="player_name"
               type="text"
-              placeholder="Player Name"
+              placeholder="Player First Name"
+              className="rounded-xl border border-white/10 bg-[#10182B] px-5 py-4 text-white outline-none placeholder:text-zinc-500"
+            />
+
+            <input
+              name="player_last_name"
+              type="text"
+              placeholder="Player Last Name"
               className="rounded-xl border border-white/10 bg-[#10182B] px-5 py-4 text-white outline-none placeholder:text-zinc-500"
             />
 
