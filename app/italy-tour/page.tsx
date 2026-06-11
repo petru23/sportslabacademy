@@ -209,7 +209,7 @@ export default function ItalyTourPage() {
           </div>
 
           <div className="relative min-h-[320px] overflow-hidden rounded-[2rem] border-4 border-[#2563EB] md:min-h-full md:rounded-[2.5rem]">
-            <ImagePlaceholder label="Girls team celebrating with trophy — Como 1907" />
+            <div className="absolute inset-0 bg-[url('/italy-tour-photo-1.jpeg')] bg-cover bg-center" />
           </div>
 
         </div>
@@ -232,17 +232,21 @@ export default function ItalyTourPage() {
 
           <div className="grid gap-4 sm:grid-cols-2 md:gap-6">
             {[
-              ['Attend a Serie A Match', 'Inside San Siro / Giuseppe Meazza stadium'],
-              ['Explore Como', 'Lakeside village at dusk'],
-              ['Explore Milan', 'Duomo di Milano at sunset'],
-              ['Visit the Italian Soccer Museum', 'Azzurri jerseys on display'],
-            ].map(([title, imgLabel]) => (
+              ['Attend a Serie A Match', 'Inside San Siro / Giuseppe Meazza stadium', null],
+              ['Explore Como', 'Lakeside village at dusk', '/italy-tour-photo-3.jpeg'],
+              ['Explore Milan', 'Duomo di Milano at sunset', null],
+              ['Visit the Italian Soccer Museum', 'Azzurri jerseys on display', null],
+            ].map(([title, imgLabel, imgSrc]) => (
               <div
                 key={title}
                 className="overflow-hidden rounded-[2rem] bg-white shadow-sm"
               >
                 <div className="relative h-[220px] md:h-[260px]">
-                  <ImagePlaceholder label={imgLabel} />
+                  {imgSrc ? (
+                    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${imgSrc}')` }} />
+                  ) : (
+                    <ImagePlaceholder label={imgLabel} />
+                  )}
                 </div>
 
                 <div className="p-6 md:p-8">
