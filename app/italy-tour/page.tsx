@@ -282,16 +282,20 @@ export default function ItalyTourPage() {
 
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-5">
             {[
-              'Hotel exterior',
-              'Como by night from the lake',
-              'Dining / breakfast area',
-              'Hotel room interior',
-            ].map((imgLabel) => (
+              { label: 'Hotel exterior', img: '/italy-tour-photo-2.jpeg' },
+              { label: 'Como by night from the lake', img: '/italy-tour-photo-6.jpeg' },
+              { label: 'Dining / breakfast area', img: '/italy-tour-photo-4.jpeg' },
+              { label: 'Hotel room interior', img: '/italy-tour-photo-1.jpeg' },
+            ].map(({ label, img }) => (
               <div
-                key={imgLabel}
+                key={label}
                 className="relative h-[200px] overflow-hidden rounded-[1.5rem] border border-white/10 md:h-[240px] md:rounded-[2rem]"
               >
-                <ImagePlaceholder label={imgLabel} />
+                {img ? (
+                  <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${img}')` }} />
+                ) : (
+                  <ImagePlaceholder label={label} />
+                )}
               </div>
             ))}
           </div>
