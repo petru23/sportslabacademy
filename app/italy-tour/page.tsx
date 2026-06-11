@@ -133,9 +133,9 @@ export default function ItalyTourPage() {
 
               <div className="flex flex-wrap items-center gap-4">
                 {[
-                  { name: 'AC Milan', src: '/ac-milan-logo.png' },
-                  { name: 'Como 1907', src: '/como-1907-logo.svg' },
-                  { name: 'ACF Fiorentina', src: '/fiorentina-logo.png' },
+                  { name: 'AC Milan', src: '/ac-milan-logo.png', size: 'large' },
+                  { name: 'Como 1907', src: '/como-1907-logo.svg', size: 'normal' },
+                  { name: 'ACF Fiorentina', src: '/fiorentina-logo.png', size: 'large' },
                 ].map((club) => (
                   <div
                     key={club.name}
@@ -144,7 +144,7 @@ export default function ItalyTourPage() {
                     <img
                       src={club.src}
                       alt={`${club.name} Logo`}
-                      className="h-14 w-14 object-contain"
+                      className={`object-contain ${club.size === 'large' ? 'h-16 w-16' : 'h-14 w-14'}`}
                     />
                   </div>
                 ))}
@@ -165,7 +165,7 @@ export default function ItalyTourPage() {
           <div className="relative hidden md:block">
             <div className="absolute -bottom-5 -right-5 h-full w-full rounded-[2rem] bg-[#2563EB]" />
 
-            <div className="relative h-[700px] overflow-hidden rounded-[2rem] border-4 border-black">
+            <div className="relative h-[500px] overflow-hidden rounded-[2rem] border-4 border-black">
               <ImagePlaceholder label="Lake Como aerial — dusk (hero image)" />
             </div>
           </div>
