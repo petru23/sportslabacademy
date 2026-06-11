@@ -234,7 +234,7 @@ export default function ItalyTourPage() {
             {[
               { title: 'Attend a Serie A Match', label: 'Inside San Siro / Giuseppe Meazza stadium', img: null },
               { title: 'Explore Como', label: 'Lakeside village at dusk', img: '/italy-tour-photo-3.jpeg' },
-              { title: 'Explore Milan', label: 'Duomo di Milano at sunset', img: null },
+              { title: 'Explore Milan', label: 'Duomo di Milano at sunset', img: '/italy-tour-milan.jpeg' },
               { title: 'Visit the Italian Soccer Museum', label: 'Azzurri jerseys on display', img: null },
             ].map(({ title, label, img }) => (
               <div
