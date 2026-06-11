@@ -1,38 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SportsLab Academy
 
-## Getting Started
+A Next.js 16 / React 19 web application for SportsLab Academy's coaching and training programs.
 
-First, run the development server:
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # Start dev server (http://localhost:3000)
+npm run build    # Production build
+npm run lint     # Run ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Documentation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For detailed information about the architecture, data flow, database schema, API routes, and development patterns, see [CLAUDE.md](CLAUDE.md).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
+- **Next.js 16** with App Router
+- **React 19**
+- **Tailwind CSS v4** for styling
+- **Supabase** for authentication and database
+- **Stripe** for payment processing
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/` — Next.js pages and API routes
+- `components/` — Reusable React components
+- `context/` — React Context for state management (Cart)
+- `lib/` — Utility functions and client instances
+- `public/` — Static assets
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Environment Setup
 
-## Deploy on Vercel
+Create a `.env.local` file with:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# sportslabacademy
-# sportslabacademy
+Stripe keys are configured server-side.
+
+## Contributing
+
+When adding new pages, follow the existing patterns documented in [CLAUDE.md](CLAUDE.md).
