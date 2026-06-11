@@ -23,14 +23,6 @@ export default function EliteSoccerClinicPage() {
   }
 
   const addProduct = async (product: any) => {
-    const { supabase } = await import('@/lib/supabase')
-    const { data } = await supabase.auth.getSession()
-
-    if (!data.session) {
-      setAuthOpen(true)
-      return
-    }
-
     addToCart(product)
     setCartOpen(true)
   }
