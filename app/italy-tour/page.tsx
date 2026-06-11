@@ -305,7 +305,7 @@ export default function ItalyTourPage() {
       </section>
 
       {/* TOUR COSTS */}
-      <section id="tour-costs" className="bg-[#F5F0E6] px-6 pt-2 pb-10 md:pt-4 md:pb-18">
+      <section id="tour-costs" className="scroll-mt-48 bg-[#F5F0E6] px-6 pt-2 pb-10 md:pt-4 md:pb-18">
         <div className="mx-auto max-w-6xl rounded-[2rem] bg-[#0B1220] p-5 shadow-2xl md:rounded-[2.5rem] md:p-10">
 
           <p className="mb-2 text-[10px] font-black uppercase tracking-[0.3em] text-blue-300 md:text-xs">
@@ -425,7 +425,7 @@ export default function ItalyTourPage() {
       </section>
 
       {/* CONTACT / ENQUIRY */}
-      <section id="enquire" className="scroll-mt-32 bg-[#F4F1E8] px-6 py-12 text-[#0F172A]">
+      <section id="enquire" className="scroll-mt-48 bg-[#F4F1E8] px-6 py-12 text-[#0F172A]">
         <div className="mx-auto max-w-4xl rounded-[3rem] border border-[#2563EB]/10 bg-[#0F172A] p-10 text-white shadow-2xl md:p-14">
           <p className="mb-4 text-sm font-black uppercase tracking-[0.3em] text-[#2563EB]">
             Contact SportsLab Academy
