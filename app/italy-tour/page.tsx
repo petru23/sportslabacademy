@@ -306,7 +306,7 @@ export default function ItalyTourPage() {
       </section>
 
       {/* TOUR COSTS */}
-      <section id="tour-costs" className="scroll-mt-32 bg-[#F5F0E6] px-6 pt-0 pb-10 md:pt-4 md:pb-18">
+      <section id="tour-costs" className="scroll-mt-24 bg-[#F5F0E6] px-6 pt-0 pb-10 md:pt-4 md:pb-18">
         <div className="mx-auto max-w-6xl rounded-[2rem] bg-[#0B1220] p-5 shadow-2xl md:rounded-[2.5rem] md:p-10">
 
           <p className="mb-2 text-[10px] font-black uppercase tracking-[0.3em] text-blue-300 md:text-xs">
