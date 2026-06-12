@@ -148,7 +148,7 @@ export default function MultisportCampPage() {
 
     {/* DAVIDE */}
     <div className="overflow-hidden rounded-[2.5rem] bg-white text-left shadow-2xl md:grid md:grid-cols-[380px_1fr]">
-      <div className="h-[420px] bg-[url('/davide.jpg')] bg-cover bg-center md:h-full" />
+      <div className="h-[420px] bg-[url('/david.jpg')] bg-cover bg-center md:h-full" />
 
       <div className="p-10 md:p-16">
         <h3 className="mb-3 text-5xl font-black">
