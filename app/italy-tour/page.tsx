@@ -165,8 +165,8 @@ export default function ItalyTourPage() {
           <div className="relative hidden md:block">
             <div className="absolute -bottom-5 -right-5 h-full w-full rounded-[2rem] bg-[#2563EB]" />
 
-            <div className="relative h-[500px] overflow-hidden rounded-[2rem] border-4 border-black">
-              <ImagePlaceholder label="Lake Como aerial — dusk (hero image)" />
+            <div className="relative h-[500px] bg-[url('/mainphoto.jpeg')] bg-cover bg-center overflow-hidden rounded-[2rem] border-4 border-black"> 
+
             </div>
           </div>
 
