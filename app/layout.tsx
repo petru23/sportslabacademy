@@ -1,11 +1,36 @@
 import './globals.css'
+import type { Metadata } from 'next'
 import Script from 'next/script'
 import { CartProvider } from '@/context/CartContext'
 import CartDrawer from '../components/CartDrawer'
+import { SITE_URL } from '@/lib/site'
 
-export const metadata = {
-  title: 'SportsLab Academy',
-  description: 'Elite youth football development',
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'SportsLab Academy | Elite Youth Soccer Coaching Brisbane',
+    template: '%s | SportsLab Academy',
+  },
+  description:
+    'Elite youth soccer programs in Brisbane — holiday camps, private coaching, junior development and clinics helping young athletes build confidence, technique and performance.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    siteName: 'SportsLab Academy',
+    locale: 'en_AU',
+    url: SITE_URL,
+    title: 'SportsLab Academy | Elite Youth Soccer Coaching Brisbane',
+    description:
+      'Elite youth soccer programs in Brisbane — holiday camps, private coaching, junior development and clinics.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SportsLab Academy | Elite Youth Soccer Coaching Brisbane',
+    description:
+      'Elite youth soccer programs in Brisbane — holiday camps, private coaching, junior development and clinics.',
+  },
 }
 
 export default function RootLayout({
