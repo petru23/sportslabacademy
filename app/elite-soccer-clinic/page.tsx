@@ -458,6 +458,7 @@ export default function EliteSoccerClinicPage() {
         <p>Davide: 0468744194</p>
         <p>sportslabacademyau@gmail.com</p>
         <p>Brisbane, QLD</p>
+        <p><a href="#" className="termly-display-preferences cursor-pointer hover:text-blue-300">Consent Preferences</a></p>
       </div>
     </div>
 

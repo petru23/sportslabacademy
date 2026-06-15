@@ -60,6 +60,7 @@ export default function SuccessPage() {
               <p>📞 Davide: 0468 744 194</p>
               <p>📧 sportslabacademyau@gmail.com</p>
               <p>📍 Brisbane, QLD</p>
+              <p><a href="#" className="termly-display-preferences cursor-pointer hover:text-blue-300">Consent Preferences</a></p>
             </div>
 
             <a

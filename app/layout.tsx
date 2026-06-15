@@ -16,6 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        {/* Termly consent manager — must load first so autoBlock can block
+            tracking scripts (e.g. Meta Pixel) until the visitor consents. */}
+        <Script
+          id="termly-resource-blocker"
+          src="https://app.termly.io/resource-blocker/a52668b9-d1cd-4500-9336-8e0fda9d7e41?autoBlock=on"
+          strategy="beforeInteractive"
+        />
+
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
