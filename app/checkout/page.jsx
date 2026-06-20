@@ -10,7 +10,6 @@ const inputClass =
 export default function CheckoutPage() {
   const { cart, total } = useCart()
 
-  const hasFullWeekCamp = cart.some((item) => item.id === 'camp-full-week')
   const hasSingleDayCamp = cart.some((item) => item.id === 'camp-single-day')
   const hasTwoWeeksCamp = cart.some((item) => item.id === 'camp-two-weeks')
 
@@ -153,28 +152,6 @@ export default function CheckoutPage() {
 />
 
             </div>
-
-            {/* MULTISPORT CAMP WEEK */}
-            {hasFullWeekCamp && (
-              <select
-                name="campWeek"
-                required
-                value={form.campWeek}
-                onChange={updateForm}
-                className="h-[64px] w-full rounded-2xl border border-white/25 bg-[#0B1220] px-5 text-white outline-none"
-              >
-                <option value="">Select Camp Week</option>
-
-
-                <option value="Week 1 — 1st July to 3rd July">
-                  5 Days Camp — 1st-3rd July & 9th-10th July
-                </option>
-
-               
-              </select>
-            )}
-
-            
 
             {/* ELITE CLINIC 3 DAY BLOCK */}
             {requiresClinicWeekSelection && (

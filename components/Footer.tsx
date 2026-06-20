@@ -33,6 +33,10 @@ export default function Footer() {
             <a href="/junior-program" className="block hover:text-blue-300">
               Junior Programs
             </a>
+
+            <a href="/italy-tour" className="block hover:text-blue-300">
+              Italy Tour 2026
+            </a>
           </div>
         </div>
 

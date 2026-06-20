@@ -87,7 +87,7 @@ export default function MultisportCampPage() {
               </p>
 
               <h3 className="text-3xl font-black">
-                5 – 12 Years
+                6 – 12 Years
               </h3>
 
             </div>
@@ -95,11 +95,35 @@ export default function MultisportCampPage() {
             <div className="rounded-2xl bg-white p-6 shadow-sm">
 
               <p className="mb-2 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
-                Sessions
+                Location
               </p>
 
               <h3 className="text-3xl font-black">
-                Thursday Sunday
+                West End
+              </h3>
+
+            </div>
+
+            <div className="rounded-2xl bg-white p-6 shadow-sm">
+
+              <p className="mb-2 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
+                Thursday
+              </p>
+
+              <h3 className="text-2xl font-black">
+                3:30pm – 4:30pm
+              </h3>
+
+            </div>
+
+            <div className="rounded-2xl bg-white p-6 shadow-sm">
+
+              <p className="mb-2 text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
+                Sunday
+              </p>
+
+              <h3 className="text-2xl font-black">
+                9:30am – 10:30am
               </h3>
 
             </div>
@@ -107,7 +131,7 @@ export default function MultisportCampPage() {
           </div>
 
           <a
-            href="#"
+            href="#pricing"
             className="inline-block rounded-full bg-[#2563EB] px-8 py-5 font-black text-white"
           >
             Join Program →
@@ -179,6 +203,130 @@ export default function MultisportCampPage() {
 
         </div>
 
+      </section>
+
+      {/* PRICING */}
+      <section id="pricing" className="bg-[#F5F0E6] px-6 py-10 md:py-18">
+        <div className="mx-auto max-w-6xl rounded-[2rem] bg-[#0B1220] p-5 shadow-2xl md:rounded-[2.5rem] md:p-10">
+
+          <p className="mb-2 text-[10px] font-black uppercase tracking-[0.3em] text-blue-300 md:text-xs">
+            Flexible Pricing
+          </p>
+
+          <h2 className="text-3xl font-black leading-none tracking-[-0.04em] text-white md:text-5xl">
+            JOIN THE
+            <br />
+            PROGRAM
+          </h2>
+
+          <div className="mt-5 grid gap-3 md:mt-7 md:grid-cols-3 md:gap-4">
+
+            {/* CASUAL PASS */}
+            <div className="rounded-[1.4rem] bg-white/10 p-4 text-white md:rounded-[1.8rem] md:p-7">
+              <p className="mb-2 text-[9px] font-black uppercase tracking-[0.28em] text-blue-200 md:text-xs">
+                Casual Pass
+              </p>
+
+              <h3 className="text-3xl font-black leading-none md:text-5xl">
+                $25
+              </h3>
+
+              <p className="mt-2 text-sm font-semibold text-blue-100">
+                Single session
+              </p>
+
+              <button
+                type="button"
+                onClick={() =>
+                  addProduct({
+                    id: 'junior-casual',
+                    name: 'Junior Program - Casual Pass (1 session)',
+                    price: 25,
+                  })
+                }
+                className="mt-4 w-full cursor-pointer rounded-full bg-white py-3 text-sm font-black text-[#0B1220] active:scale-95 md:py-4"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            {/* TERM 3 — 1 SESSION/WEEK */}
+            <div className="relative rounded-[1.4rem] bg-[#2563EB] p-4 text-white md:rounded-[1.8rem] md:p-7">
+              <div className="absolute right-4 top-4 rounded-full bg-white px-3 py-1 text-[8px] font-black uppercase tracking-[0.14em] text-[#2563EB] md:py-1.5 md:text-[9px]">
+                Best Value
+              </div>
+
+              <p className="mb-2 text-[9px] font-black uppercase tracking-[0.28em] text-blue-100 md:text-xs">
+                Term 3 — 1x / Week
+              </p>
+
+              <div className="flex items-end gap-3">
+                <h3 className="text-3xl font-black leading-none md:text-5xl">
+                  $200
+                </h3>
+
+                <span className="pb-1 text-sm text-blue-100 line-through md:text-xl">
+                  $250
+                </span>
+              </div>
+
+              <p className="mt-2 text-sm font-semibold text-blue-100">
+                1 session per week · 10 sessions
+              </p>
+
+              <button
+                type="button"
+                onClick={() =>
+                  addProduct({
+                    id: 'junior-term3-1x',
+                    name: 'Junior Program - Term 3 (1 session/week, 10 sessions)',
+                    price: 200,
+                  })
+                }
+                className="mt-4 w-full cursor-pointer rounded-full bg-white py-3 text-sm font-black text-[#2563EB] active:scale-95 md:py-4"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            {/* TERM 3 — 2 SESSIONS/WEEK */}
+            <div className="rounded-[1.4rem] bg-white/10 p-4 text-white md:rounded-[1.8rem] md:p-7">
+              <p className="mb-2 text-[9px] font-black uppercase tracking-[0.28em] text-blue-200 md:text-xs">
+                Term 3 — 2x / Week
+              </p>
+
+              <div className="flex items-end gap-3">
+                <h3 className="text-3xl font-black leading-none md:text-5xl">
+                  $375
+                </h3>
+
+                <span className="pb-1 text-sm text-blue-100 line-through md:text-xl">
+                  $500
+                </span>
+              </div>
+
+              <p className="mt-2 text-sm font-semibold text-blue-100">
+                2 sessions per week · 20 sessions
+              </p>
+
+              <button
+                type="button"
+                onClick={() =>
+                  addProduct({
+                    id: 'junior-term3-2x',
+                    name: 'Junior Program - Term 3 (2 sessions/week, 20 sessions)',
+                    price: 375,
+                  })
+                }
+                className="mt-4 w-full cursor-pointer rounded-full bg-white py-3 text-sm font-black text-[#0B1220] active:scale-95 md:py-4"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+          </div>
+
+        </div>
       </section>
 
       {/* CTA */}

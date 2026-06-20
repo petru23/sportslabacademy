@@ -73,6 +73,9 @@ export default function Navbar({
             <a href="/junior-program" className="font-semibold hover:text-white/70">
               JUNIOR PROGRAMS
             </a>
+            <a href="/italy-tour" className="font-semibold hover:text-white/70">
+              ITALY TOUR
+            </a>
             <a href="/team" className="font-semibold hover:text-white/70">
               MEET OUR TEAM
             </a>
@@ -209,6 +212,13 @@ export default function Navbar({
               className="whitespace-nowrap border-b border-white/20 py-4"
             >
               JUNIOR PROGRAMS
+            </a>
+            <a
+              onClick={() => setMenuOpen(false)}
+              href="/italy-tour"
+              className="whitespace-nowrap border-b border-white/20 py-4"
+            >
+              ITALY TOUR
             </a>
             <a
               onClick={() => setMenuOpen(false)}

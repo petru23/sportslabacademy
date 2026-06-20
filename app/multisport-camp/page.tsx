@@ -73,7 +73,7 @@ export default function MultisportCampPage() {
                 ['Ages', '5–12 Years'],
                 ['Time', '8am–4pm'],
                 ['Location', 'Davies Park, West End'],
-                ['Dates', '1st-3rd July & 9th-10th July'],
+                ['Dates', '1st-2nd July & 9th-10th July'],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-2xl bg-white p-4 shadow-sm">
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-[#2563EB]">
@@ -189,7 +189,7 @@ export default function MultisportCampPage() {
       PACKAGES
     </h2>
 
-    <div className="mt-5 grid gap-3 md:mt-7 md:grid-cols-3 md:gap-4">
+    <div className="mt-5 grid gap-3 md:mt-7 md:gap-4">
 
       <div className="rounded-[1.4rem] bg-white/10 p-4 text-white md:rounded-[1.8rem] md:p-7">
         <p className="mb-2 text-[9px] font-black uppercase tracking-[0.28em] text-blue-200 md:text-xs">
@@ -218,46 +218,6 @@ export default function MultisportCampPage() {
           Add to Cart
         </button>
       </div>
-
-      <div className="relative rounded-[1.4rem] bg-[#2563EB] p-4 text-white md:rounded-[1.8rem] md:p-7">
-        <div className="absolute right-4 top-4 rounded-full bg-white px-3 py-1 text-[8px] font-black uppercase tracking-[0.14em] text-[#2563EB] md:py-1.5 md:text-[9px]">
-          Best Seller
-        </div>
-
-        <p className="mb-2 text-[9px] font-black uppercase tracking-[0.28em] text-blue-100 md:text-xs">
-          5 Days
-        </p>
-
-        <div className="flex items-end gap-3">
-          <h3 className="text-3xl font-black leading-none md:text-5xl">
-            $400
-          </h3>
-
-          <span className="pb-1 text-sm text-blue-100 line-through md:text-xl">
-            $500
-          </span>
-        </div>
-
-        <p className="mt-2 text-sm font-semibold text-blue-100">
-          Best Value Pack
-        </p>
-
-        <button
-          type="button"
-          onClick={() =>
-            addProduct({
-              id: 'camp-full-week',
-              name: '5 Days Camp',
-              price: 400,
-            })
-          }
-          className="mt-4 w-full cursor-pointer rounded-full bg-white py-3 text-sm font-black text-[#2563EB] active:scale-95 md:py-4"
-        >
-          Add to Cart
-        </button>
-      </div>
-
-      
 
     </div>
 
