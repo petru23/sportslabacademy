@@ -37,6 +37,10 @@ export default function Footer() {
             <a href="/italy-tour" className="block hover:text-blue-300">
               Italy Tour 2026
             </a>
+
+            <a href="/sponsor" className="block hover:text-blue-300">
+              Become a Sponsor
+            </a>
           </div>
         </div>
 

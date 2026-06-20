@@ -142,6 +142,13 @@ export default function MultisportCampPage() {
       </a>
 
       <a
+        href="/italy-tour"
+        className="font-semibold hover:text-white/70"
+      >
+        ITALY TOUR
+      </a>
+
+      <a
         href="/team"
         className="font-semibold hover:text-white/70"
       >
@@ -295,6 +302,14 @@ export default function MultisportCampPage() {
         className="whitespace-nowrap border-b border-white/20 py-4"
       >
         JUNIOR PROGRAMS
+      </a>
+
+      <a
+        onClick={() => setMenuOpen(false)}
+        href="/italy-tour"
+        className="whitespace-nowrap border-b border-white/20 py-4"
+      >
+        ITALY TOUR
       </a>
 
       <a
