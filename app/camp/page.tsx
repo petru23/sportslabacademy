@@ -149,7 +149,7 @@ export default function MultisportCampPage() {
       </p>
 
       <p className="text-lg font-black leading-relaxed">
-        📆 1st July – 2nd July
+        📆 1st July – 3rd July
         <br />
         📆 9th July – 10th July
       </p>

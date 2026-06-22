@@ -254,7 +254,7 @@ export default function MultisportCampPage() {
             {/* TERM 3 — 1 SESSION/WEEK */}
             <div className="relative rounded-[1.4rem] bg-[#2563EB] p-4 text-white md:rounded-[1.8rem] md:p-7">
               <div className="absolute right-4 top-4 rounded-full bg-white px-3 py-1 text-[8px] font-black uppercase tracking-[0.14em] text-[#2563EB] md:py-1.5 md:text-[9px]">
-                Best Value
+                Most Popular
               </div>
 
               <p className="mb-2 text-[9px] font-black uppercase tracking-[0.28em] text-blue-100 md:text-xs">
@@ -263,7 +263,7 @@ export default function MultisportCampPage() {
 
               <div className="flex items-end gap-3">
                 <h3 className="text-3xl font-black leading-none md:text-5xl">
-                  $200
+                  $220
                 </h3>
 
                 <span className="pb-1 text-sm text-blue-100 line-through md:text-xl">
@@ -281,7 +281,7 @@ export default function MultisportCampPage() {
                   addProduct({
                     id: 'junior-term3-1x',
                     name: 'Junior Program - Term 3 (1 session/week, 10 sessions)',
-                    price: 200,
+                    price: 220,
                   })
                 }
                 className="mt-4 w-full cursor-pointer rounded-full bg-white py-3 text-sm font-black text-[#2563EB] active:scale-95 md:py-4"
@@ -298,7 +298,7 @@ export default function MultisportCampPage() {
 
               <div className="flex items-end gap-3">
                 <h3 className="text-3xl font-black leading-none md:text-5xl">
-                  $375
+                  $400
                 </h3>
 
                 <span className="pb-1 text-sm text-blue-100 line-through md:text-xl">
@@ -316,7 +316,7 @@ export default function MultisportCampPage() {
                   addProduct({
                     id: 'junior-term3-2x',
                     name: 'Junior Program - Term 3 (2 sessions/week, 20 sessions)',
-                    price: 375,
+                    price: 400,
                   })
                 }
                 className="mt-4 w-full cursor-pointer rounded-full bg-white py-3 text-sm font-black text-[#0B1220] active:scale-95 md:py-4"
