@@ -37,6 +37,9 @@ export default function CheckoutPage() {
     notes: '',
   })
 
+  const [agreedTerms, setAgreedTerms] = useState(false)
+  const [photoConsent, setPhotoConsent] = useState(false)
+
   const updateForm = (e) => {
     setForm({
       ...form,
@@ -52,10 +55,22 @@ export default function CheckoutPage() {
       return
     }
 
+    if (!agreedTerms) {
+      alert('Please accept the Terms & Declarations to continue.')
+      return
+    }
+
     const res = await fetch('/api/create-checkout-session', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ cart, form }),
+      body: JSON.stringify({
+        cart,
+        form: {
+          ...form,
+          termsAccepted: agreedTerms ? 'Yes' : 'No',
+          photoConsent: photoConsent ? 'Yes' : 'No',
+        },
+      }),
     })
 
     const data = await res.json()
@@ -232,6 +247,119 @@ export default function CheckoutPage() {
               onChange={updateForm}
               className="w-full rounded-2xl border border-white/25 bg-transparent p-5 text-white outline-none placeholder:text-white/45"
             />
+
+            {/* MANDATORY TERMS & DECLARATIONS */}
+            <div className="rounded-2xl border border-white/25 bg-white/5 p-5">
+
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-sm font-black text-white">
+                    Terms &amp; Declarations
+                  </p>
+                  <p className="mt-1 text-xs font-bold uppercase tracking-wide text-[#60A5FA]">
+                    Required to register
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  role="switch"
+                  aria-checked={agreedTerms}
+                  onClick={() => setAgreedTerms((v) => !v)}
+                  className={`relative h-7 w-12 flex-none cursor-pointer rounded-full transition ${
+                    agreedTerms ? 'bg-[#2563EB]' : 'bg-white/20'
+                  }`}
+                >
+                  <span
+                    className={`absolute top-1 h-5 w-5 rounded-full bg-white transition-all ${
+                      agreedTerms ? 'left-6' : 'left-1'
+                    }`}
+                  />
+                </button>
+              </div>
+
+              <div className="mt-4 space-y-3 text-xs leading-relaxed text-white/65">
+                <p>
+                  <span className="font-bold text-white">Medical Declaration. </span>
+                  Please disclose any relevant medical conditions, allergies, medications,
+                  injuries or dietary requirements. I confirm that the information provided is
+                  accurate and complete.
+                </p>
+                <p>
+                  <span className="font-bold text-white">Risk Acknowledgement. </span>
+                  I acknowledge that participation in football training sessions, matches, travel
+                  and related activities involves inherent risks including injury, illness,
+                  disability and, in rare circumstances, death. I understand and accept these
+                  risks.
+                </p>
+                <p>
+                  <span className="font-bold text-white">Insurance Declaration. </span>
+                  I understand that SportsLab Academy&apos;s insurance does not replace personal
+                  travel, medical or health insurance. I confirm that my child and accompanying
+                  family members will hold appropriate travel and medical insurance for the
+                  duration of the tour.
+                </p>
+                <p>
+                  <span className="font-bold text-white">Medical Treatment Consent. </span>
+                  In the event of illness or injury, I authorise SportsLab Academy staff to seek
+                  emergency medical treatment if I cannot be contacted immediately.
+                </p>
+                <p>
+                  <span className="font-bold text-white">Code of Conduct. </span>
+                  Players are expected to behave respectfully towards coaches, teammates,
+                  opponents, hotel staff, officials and members of the public throughout the
+                  tour.
+                </p>
+                <p>
+                  <span className="font-bold text-white">Parent Responsibility. </span>
+                  Parents/guardians travelling with their child remain responsible for their
+                  child outside scheduled SportsLab Academy activities.
+                </p>
+                <p>
+                  <span className="font-bold text-white">Release &amp; Indemnity. </span>
+                  To the maximum extent permitted by law, I release SportsLab Academy and its
+                  representatives from liability arising from the ordinary risks associated with
+                  participation in football activities and international travel.
+                </p>
+              </div>
+            </div>
+
+            {/* OPTIONAL PHOTO & VIDEO CONSENT */}
+            <div className="rounded-2xl border border-white/25 bg-white/5 p-5">
+
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-sm font-black text-white">
+                    Photo &amp; Video Consent
+                  </p>
+                  <p className="mt-1 text-xs font-bold uppercase tracking-wide text-white/45">
+                    Optional
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  role="switch"
+                  aria-checked={photoConsent}
+                  onClick={() => setPhotoConsent((v) => !v)}
+                  className={`relative h-7 w-12 flex-none cursor-pointer rounded-full transition ${
+                    photoConsent ? 'bg-[#2563EB]' : 'bg-white/20'
+                  }`}
+                >
+                  <span
+                    className={`absolute top-1 h-5 w-5 rounded-full bg-white transition-all ${
+                      photoConsent ? 'left-6' : 'left-1'
+                    }`}
+                  />
+                </button>
+              </div>
+
+              <p className="mt-4 text-xs leading-relaxed text-white/65">
+                I authorise SportsLab Academy to use photographs and video footage of my child
+                for promotional, marketing, social media, website and educational purposes
+                without compensation.
+              </p>
+            </div>
 
           </div>
         </section>

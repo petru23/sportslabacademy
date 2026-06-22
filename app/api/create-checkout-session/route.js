@@ -83,6 +83,8 @@ export async function POST(req) {
         phone: form.phone || '',
         email: form.email || '',
         notes: form.notes || '',
+        termsAccepted: form.termsAccepted || '',
+        photoConsent: form.photoConsent || '',
       },
 
       success_url: `${process.env.NEXT_PUBLIC_SITE_URL}/checkout/success`,
