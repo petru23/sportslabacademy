@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/team',
     '/sponsor',
     '/tap-test',
+    '/cookie-policy',
+    '/privacy',
   ]
 
   const now = new Date()

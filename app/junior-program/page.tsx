@@ -44,8 +44,7 @@ export default function MultisportCampPage() {
   }
 
   return (
-    <main className="bg-[#F5F0E6] text-[#111111]">
-        
+    <main className="overflow-x-hidden bg-[#F5F0E6] text-[#111111]">
 
       <Navbar
         loggedIn={loggedIn}
@@ -57,15 +56,15 @@ export default function MultisportCampPage() {
       />
 
       {/* HERO */}
-      <section className="mx-auto grid max-w-7xl items-center gap-16 pt-22 md:grid-cols-2">
+      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-12 pt-24 md:gap-16 md:pb-20 md:pt-40 md:grid-cols-2">
 
-        <div className="pt-16 md:pt-20">
+        <div>
 
           <p className="mb-5 text-sm font-black uppercase tracking-[0.3em] text-[#2563EB]">
             Junior Development
           </p>
 
-          <h1 className="mb-8 text-6xl font-black leading-none md:text-8xl">
+          <h1 className="mb-8 text-5xl font-black leading-none md:text-8xl">
             JUNIOR
             <br />
             SOCCER
@@ -141,9 +140,9 @@ export default function MultisportCampPage() {
 
         <div className="relative">
 
-          <div className="absolute -bottom-5 -right-5 h-full w-full rounded-[2rem] bg-[#2563EB]" />
+          <div className="absolute -bottom-3 -right-3 h-full w-full rounded-[2rem] bg-[#2563EB] md:-bottom-5 md:-right-5" />
 
-          <div className="relative h-[750px] overflow-hidden rounded-[2rem] border-4 border-black md:h-[650px]">
+          <div className="relative h-[380px] overflow-hidden rounded-[2rem] border-4 border-black sm:h-[480px] md:h-[650px]">
 
            <div className="absolute inset-0 bg-[url('/junior-program.jpg')] bg-cover bg-[center_25%] md:bg-center" />
           </div>
@@ -153,56 +152,58 @@ export default function MultisportCampPage() {
       </section>
 
       {/* INFO */}
-      <section className="mx-auto mt-24 max-w-7xl">
+      <section className="bg-gradient-to-b from-[#111827] to-[#0B1220] px-6 py-12 text-white md:py-20">
+        <div className="mx-auto max-w-7xl">
 
-        <p className="mb-4 text-sm font-black uppercase tracking-[0.3em] text-[#2563EB]">
-          Weekly Development
-        </p>
+          <p className="mb-4 text-xs font-black uppercase tracking-[0.3em] text-[#60A5FA] md:text-sm">
+            Weekly Development
+          </p>
 
-        <h2 className="mb-14 text-5xl font-black leading-none md:text-7xl">
-          BUILDING
-          <br />
-          CONFIDENT
-          <br />
-          PLAYERS
-        </h2>
+          <h2 className="mb-10 text-4xl font-black leading-none md:mb-14 md:text-7xl">
+            BUILDING
+            <br />
+            CONFIDENT
+            <br />
+            PLAYERS
+          </h2>
 
-        <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-3 md:gap-6">
 
-          {[
-            [
-              "Technical Training",
-              "Ball mastery, passing, dribbling, first touch and finishing.",
-            ],
-            [
-              "Game Understanding",
-              "Positioning, awareness, movement and decision-making.",
-            ],
-            [
-              "Confidence & Fun",
-              "Positive coaching environment helping players enjoy football.",
-            ],
-          ].map(([title, text]) => (
+            {[
+              [
+                "Technical Training",
+                "Ball mastery, passing, dribbling, first touch and finishing.",
+              ],
+              [
+                "Game Understanding",
+                "Positioning, awareness, movement and decision-making.",
+              ],
+              [
+                "Confidence & Fun",
+                "Positive coaching environment helping players enjoy football.",
+              ],
+            ].map(([title, text]) => (
 
-            <div
-              key={title}
-              className="rounded-[2rem] bg-white p-8 shadow-sm"
-            >
+              <div
+                key={title}
+                className="rounded-[2rem] bg-white p-8 text-black shadow-sm"
+              >
 
-              <h3 className="mb-4 text-3xl font-black">
-                {title}
-              </h3>
+                <h3 className="mb-4 text-3xl font-black">
+                  {title}
+                </h3>
 
-              <p className="text-lg leading-relaxed text-zinc-600">
-                {text}
-              </p>
+                <p className="text-lg leading-relaxed text-zinc-600">
+                  {text}
+                </p>
 
-            </div>
+              </div>
 
-          ))}
+            ))}
+
+          </div>
 
         </div>
-
       </section>
 
       {/* PRICING */}
@@ -330,15 +331,15 @@ export default function MultisportCampPage() {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-7xl py-24">
+      <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
 
-        <div className="rounded-[3rem] bg-[#0F172A] p-12 text-white">
+        <div className="rounded-[2rem] bg-[#0F172A] p-7 text-white md:rounded-[3rem] md:p-12">
 
           <p className="mb-4 text-sm font-black uppercase tracking-[0.3em] text-blue-300">
             Join The Program
           </p>
 
-          <h2 className="mb-8 text-5xl font-black md:text-7xl">
+          <h2 className="mb-8 text-4xl font-black md:text-7xl">
             READY TO
             <br />
             DEVELOP?

@@ -81,7 +81,7 @@ export default function ItalyTourPage() {
       />
 
       {/* HERO */}
-      <section className="px-6 pb-12 pt-20 md:pb-20 md:pt-36">
+      <section className="px-6 pb-12 pt-24 md:pb-20 md:pt-40">
         <div className="mx-auto grid max-w-7xl items-start gap-12 md:grid-cols-2">
 
           <div>

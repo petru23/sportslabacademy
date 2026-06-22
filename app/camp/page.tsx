@@ -57,7 +57,7 @@ export default function MultisportCampPage() {
       />
 
       {/* HOLIDAY PROGRAMS PAGE */}
-      <section className="min-h-screen bg-[#F4F1E8] px-6 pb-16 pt-24 text-[#0F172A] md:pt-36">
+      <section className="min-h-screen bg-[#F4F1E8] px-6 pb-16 pt-24 text-[#0F172A] md:pt-40">
         <div className="mx-auto max-w-7xl">
 
           {/* PAGE INTRO */}

@@ -57,7 +57,7 @@ export default function MultisportCampPage() {
       />
 
       {/* HERO */}
-<section className="bg-[#0B0F19] px-6 pb-14 pt-20 text-white md:min-h-screen md:pb-16 md:pt-40">
+<section className="bg-[#0B0F19] px-6 pb-14 pt-24 text-white md:min-h-screen md:pb-16 md:pt-40">
   <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 md:gap-12">
     <div>
       <p className="mb-2 text-xs font-black uppercase tracking-[0.35em] text-[#60A5FA] md:text-sm">
